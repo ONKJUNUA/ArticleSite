@@ -38,9 +38,9 @@ nav {
 }
 
 nav > .nav-section {
-    padding: 3rem 2rem;
+    padding: 1rem 2vw;
     display: flex;
-    gap:1rem;
+    gap: 1vw;
     border-left: 1px solid var(--border-color);
     align-items: center;
     justify-content: center;
@@ -51,19 +51,19 @@ nav > .nav-section {
 }
 
 #nav-link-section {
-    gap: 2rem;
+    gap: 2vw;
 }
 
 #nav-social-section {
-    gap: 2rem;
+    gap: 2vw;
 }
 
 #nav-logo-section > a > i {
-    font-size: 2.5rem;
+    font-size: 2.5vw;
 }
 
 #nav-contact-section > a > i {
-    font-size: 3rem;
+    font-size: 3vw;
 }
 
 #nav-logo-section, #nav-link-section {
