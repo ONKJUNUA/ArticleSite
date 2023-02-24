@@ -3,8 +3,9 @@
 }
 
 :root {
-    --background-color: rgb(10,5,25);
-    --border-color: rgb(255,255,255,0.1)
+    --background-color: #111;
+    --border-color: #222;
+    --color-color: #fff;
 }
 
 body {
@@ -13,12 +14,18 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0px;
+    overflow-x: hidden;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 h1,h2,h3,a,p,span {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 400;
-    color: white;
+    color: var(--color-color);
 }
 
 h1 {
@@ -29,6 +36,19 @@ a {
     text-decoration: none;
     font-size: 1.5vw;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--border-color);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--border-color);
+  }
 
 nav {
     display: flex;
@@ -108,6 +128,34 @@ main > article {
     position: absolute;
     left: 0px;
     top: 0px;
+    transition: transform 400ms ease;  
+}
+
+main > article[data-status="inactive"] {
+  transform: translateX(-100%);
+  transition: none;
+}
+
+main > article[data-status="active"] {
+  transform: translateX(0%);
+}
+
+main > article[data-status="before"] {
+  transform: translateX(-100%);
+}
+
+main > article[data-status="after"] {
+  transform: translateX(100%);
+}
+
+main > article[data-status="becoming-active-from-before"] {
+  transform: translateX(-100%);
+  transition: none;
+}
+
+main > article[data-status="becoming-active-from-after"] {
+  transform: translateX(100%);
+  transition: none;
 }
 
 main > article > .article-section {
@@ -157,18 +205,34 @@ span {
 }
 
 .article-title-button{
-    color: white;
+    color: var(--color-color);
+    background-color: var(--background-color);
+    border:none;
+    cursor: pointer;
+}
+
+.nav-contact-button{
+    font-size: 3vw;
+    color: var(--color-color);
     background-color: var(--background-color);
     border:none;
     cursor: pointer;
 }
 
 .article-nav-button{
-    color: white;
+    padding: 20px;
+    background-color: transparent;
+    flex-grow: 1;
+    color: var(--color-color);
     background-color: var(--background-color);
     border:none;
+    outline: none;
     cursor: pointer;
 }
+
+main > article > .article-nav-section > .article-nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
 
 @media(max-width: 1200px) {    
     #nav-mobile-section {
@@ -186,6 +250,7 @@ span {
   
     main {
       overflow-y: auto;
+      overflow-x: hidden;
     }
     
     main > article {
