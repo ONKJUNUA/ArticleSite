@@ -46,6 +46,28 @@ nav > .nav-section {
     justify-content: center;
 }
 
+.article-nav-section {
+    padding: 1rem 2vw;
+    display: flex;
+    gap: 10vw;
+    border-left: 1px solid var(--border-color);
+    align-items: center;
+    justify-content: center;
+}
+
+.article-title-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-description-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw;
+}
+
 #nav-logo-section {
     justify-content: flex-start;
 }
@@ -98,17 +120,35 @@ main > article > .article-title-section, main > article > .article-nav-section{
     border-top: 1px solid var(--border-color);
 }
 
-.article-image-section{
+.image-1{
     background-image: url("img/a1.png");
+}
+
+.image-2{
+    background-image: url("img/a2.png");
+}
+
+.image-3{
+    background-image: url("img/a3.png");
+}
+
+.image-4{
+    background-image: url("img/a4.png");
+}
+
+.article-image-section{
     background-position: center;
     background-size: contain;
 }
 
-.article-title-section{
-    padding-top: 10px;
-    text-align: center;
-}
-
 h2 {
     font-size: 2.5vw;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+span {
+    font-size: 20px;
 }
