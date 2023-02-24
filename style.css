@@ -22,8 +22,13 @@ h1,h2,h3,a,p,span {
     color: white;
 }
 
+h1 {
+    font-size: 2vw;
+}
+
 a {
     text-decoration: none;
+    font-size: 1.5vw;
 }
 
 nav {
@@ -46,7 +51,7 @@ nav > .nav-section {
 }
 
 #nav-link-section {
-    gap:4rem;
+    gap: 2rem;
 }
 
 #nav-social-section {
@@ -57,10 +62,38 @@ nav > .nav-section {
     font-size: 2.5rem;
 }
 
-#nav-logo-section, #nav-link-section,  #nav-contact-section {
+#nav-contact-section > a > i {
+    font-size: 3rem;
+}
+
+#nav-logo-section, #nav-link-section {
     flex-basis: calc(100%/3);
 }
 
-#nav-social-section {
-    flex-basis: 1;
+#nav-social-section, #nav-contact-section {
+    flex-basis: calc(100%/6);
+}
+
+main{
+    flex-grow: 1;
+}
+
+main > article {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+}
+
+main > article > .article-section {
+    height: 100%;
+}
+
+main > article > .article-description-section, main > article > .article-nav-section {
+    border-left: 1px solid var(--border-color);
+}
+
+main > article > .article-title-section, main > article > .article-nav-section{
+    height: 100%;
+    border-top: 1px solid var(--border-color);
 }
