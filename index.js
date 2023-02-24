@@ -58,12 +58,14 @@ const LightMode = () => {
         counter++;
         root.style.setProperty('--color-color', '#111');
         root.style.setProperty('--border-color', '#666');
-        root.style.setProperty('--background-color', '#888');
+        root.style.setProperty('--background-color', '#fff');
+        root.style.setProperty('--hover-color', '#ddd');
     }
     else {
         counter--;
         root.style.setProperty('--color-color', '#fff');
         root.style.setProperty('--border-color', '#222');
         root.style.setProperty('--background-color', '#111');
+        root.style.setProperty('--hover-color', '#222');
     }
 }
