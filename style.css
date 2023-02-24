@@ -13,7 +13,6 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0px;
-    overflow: hidden;
 }
 
 h1,h2,h3,a,p,span {
@@ -98,6 +97,7 @@ nav > .nav-section {
 
 main{
     flex-grow: 1;
+    position: relative;
 }
 
 main > article {
@@ -105,6 +105,9 @@ main > article {
     height: 100%;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 4fr 1fr;
+    position: absolute;
+    left: 0px;
+    top: 0px;
 }
 
 main > article > .article-section {
@@ -151,4 +154,18 @@ h3 {
 
 span {
     font-size: 20px;
+}
+
+.article-title-button{
+    color: white;
+    background-color: var(--background-color);
+    border:none;
+    cursor: pointer;
+}
+
+.article-nav-button{
+    color: white;
+    background-color: var(--background-color);
+    border:none;
+    cursor: pointer;
 }
